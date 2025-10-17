@@ -177,7 +177,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void limparCamposEVoltarParaModoSalvar() {
-        // Limpa todos os campos de entrada
+    
         editTitulo.setText("");
         editDiretor.setText("");
         editAnoLancamento.setText("");
