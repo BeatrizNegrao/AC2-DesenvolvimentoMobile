@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
 
         databaseHelper = new FilmeDbHelper(this);
 
-        // Carrega os filmes do banco na lista ao iniciar a activity
+    
         carregarFilmes();
 
         buttonSalvar.setOnClickListener(v -> salvarOuAtualizarFilme());
@@ -102,7 +102,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void salvarOuAtualizarFilme() {
-        // Pega os dados dos campos de texto
+
         String titulo = editTitulo.getText().toString().trim();
         String diretor = editDiretor.getText().toString().trim();
         String ano = editAnoLancamento.getText().toString().trim();
@@ -130,7 +130,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         if (filmeSelecionadoId == null) {
-            // MODO SALVAR (nenhum filme selecionado)
+
             long resultado = databaseHelper.inserirFilme(titulo, diretor, ano, nota, genero, viuCinemaInt);
             if (resultado != -1) {
                 Toast.makeText(this, "Filme salvo com sucesso!", Toast.LENGTH_SHORT).show();
